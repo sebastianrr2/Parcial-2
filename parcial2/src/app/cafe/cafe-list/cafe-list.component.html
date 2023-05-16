@@ -1,0 +1,33 @@
+<!-- Main Content -->
+<div class="container mt-4">
+  <div class="row">
+    <!-- Table -->
+    <div class="col-6">
+      <table class="table">
+        <thead>
+          <tr class="table-secondary">
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Sabor</th>
+            <th scope="col">Altura</th>
+            <th scope="col">Imagen</th>
+
+          </tr>
+          <tr *ngFor="let cafe of cafes">
+            <th scope="row">{{cafe.id}}</th>
+            <td><a href="#" class="text-decoration-none">{{cafe.nombre}}</a></td>
+            <td>{{cafe.tipo}}</td>
+            <td>{{cafe.sabor}}</td>
+            <td>{{cafe.altura}}</td>
+            <td>{{cafe.imagen}}</td>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+      <!-- Summary -->
+      <p>Total cafe de origen: {{getCafeOrigen}}</p>
+      <p>Total cafe de blend: {{getCafeBlend}}</p>
+    </div>
+  </div>
+</div>
